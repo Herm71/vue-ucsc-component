@@ -1,24 +1,9 @@
 <template>
-  <div class="ribbon-wrap">
-    <div class="ribbon ribbon-emergency" role="complementary">
+  <div v-for="item in items" :key="item.id" class="ribbon-wrap">
+    <div class="ribbon" :class="item.class" role="complementary">
       <div class="inner">
-        {{ emergencyMessage1 }}
-        <a v-bind:href="emergencyUrl">{{ emergencyMessage2 }}</a>
-      </div>
-    </div>
-
-    <div class="ribbon ribbon-alert" role="complementary">
-      <div class="inner">
-        Stay informed:&nbsp;<a href="https://recovery.ucsc.edu"
-          >COVID-19 (coronavirus) information</a
-        >
-      </div>
-    </div>
-    <div class="ribbon ribbon-notice" role="complementary">
-      <div class="inner">
-        Stay informed:&nbsp;<a href="https://recovery.ucsc.edu"
-          >COVID-19 (coronavirus) information</a
-        >
+        {{ item.message }}
+        <a :href="item.url">{{ item.urlMessage }}</a>
       </div>
     </div>
   </div>
@@ -27,8 +12,7 @@
 export default {
   name: "AlertBanner",
   props: {
-    emergencyMessage1: String,
-    emergencyMessage2: String,
+    items: Array,
   },
 };
 </script>

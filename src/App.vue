@@ -1,6 +1,6 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <AlertBanner />
+  <AlertBanner :items="items" />
   <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
 </template>
 
@@ -14,15 +14,33 @@ export default {
     // HelloWorld,
     AlertBanner,
   },
-  data() {
-    return {
-      emergencyMessage1:
-        "The Accellion attack impacted University of California (UC), as it previously disclosed in early April.",
-      emergencyMessage2:
-        "Get the latest information about this event, our response, and available credit protection services.",
-      emergencyUrl:
-        "https://ucnet.universityofcalifornia.edu/data-security/accellion-notice.html",
-    };
+  created() {
+    this.items = [
+      {
+        id: 1,
+        message:
+          "The Accellion attack impacted University of California (UC), as it previously disclosed in early April.",
+        urlMessage:
+          "Get the latest information about this event, our response, and available credit protection services.",
+        url:
+          "https://ucnet.universityofcalifornia.edu/data-security/accellion-notice.html",
+        class: "ribbon-emergency",
+      },
+      {
+        id: 2,
+        message: "Stay informed:",
+        urlMessage: "COVID-19 (coronavirus) information",
+        url: "https://recovery.ucsc.edu/",
+        class: "ribbon-alert",
+      },
+      {
+        id: 3,
+        message: "Your mom",
+        urlMessage: "sucks donkey balls.",
+        url: "https://recovery.ucsc.edu/",
+        class: "ribbon-notice",
+      },
+    ];
   },
 };
 </script>

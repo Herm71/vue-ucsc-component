@@ -1,17 +1,13 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
   <AlertBanner :items="items" />
-  <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
 </template>
 
 <script>
-// import HelloWorld from "./components/HelloWorld.vue";
 import AlertBanner from "./components/AlertBanner.vue";
 
 export default {
   name: "App",
   components: {
-    // HelloWorld,
     AlertBanner,
   },
   created() {

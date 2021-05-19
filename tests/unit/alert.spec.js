@@ -1,19 +1,8 @@
-it("double done", function(done) {
-    // Calling `done()` twice is an error
-    setImmediate(done);
-    setImmediate(done);
-});
-
-import { expect } from "chai";
-import { shallowMount } from "@vue/test-utils";
-import AlertBanner from "@/components/AlertBanner.vue";
-
-describe("HelloWorld.vue", () => {
-    it("testing props", () => {
-        const msg = "new message";
-        const wrapper = shallowMount(AlertBanner, {
-            props: { msg },
+import { assert } from "chai";
+describe("Array", () => {
+    describe("#indexOf()", () => {
+        it("should return -1 when the value is not present", function() {
+            assert.equal(-1, [1, 2, 3].indexOf(4));
         });
-        expect(wrapper.text()).to.include(msg);
     });
 });

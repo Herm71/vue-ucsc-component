@@ -1,14 +1,17 @@
 <template>
   <AlertBanner :items="items" />
+  <AlertTwo />
 </template>
 
 <script>
 import AlertBanner from "./components/AlertBanner.vue";
+import AlertTwo from "./components/AlertTwo/AlertTwo.vue";
 
 export default {
   name: "App",
   components: {
     AlertBanner,
+    AlertTwo,
   },
   created() {
     this.items = [

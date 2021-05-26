@@ -1,14 +1,7 @@
 <template>
   <div>
     <p>Hello World Outer</p>
-    <AlertTwoInner 
-    v-for="(item, id) in goober"
-            :class="item.class"
-            :datetime="item.datetime"
-            :message="item.message"
-            :urlMessage="item.urlMessage"
-            :url="item.url"
-            :key="id"/>
+    <AlertTwoInner :items="items" />
   </div>
 </template>
 
@@ -23,19 +16,16 @@ export default {
   },
   data() {
     return {
-      goober: [],
-      
+      items: [],
     };
-    
   },
   async created() {
     try {
       const res = await axios.get("test-data.json");
-      this.goober = res.data;
-      console.log(res.data);
+      this.items = res.data;
+      // console.log(res.data);
     } catch (err) {
-      console.log(err);
-      
+      // console.log(err);
     }
   },
 };

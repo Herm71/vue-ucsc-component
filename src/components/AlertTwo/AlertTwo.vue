@@ -1,7 +1,14 @@
 <template>
   <div>
     <p>Hello World Outer</p>
-    <AlertTwoInner />
+    <AlertTwoInner 
+    v-for="(item, id) in goober"
+            :class="item.class"
+            :datetime="item.datetime"
+            :message="item.message"
+            :urlMessage="item.urlMessage"
+            :url="item.url"
+            :key="id"/>
   </div>
 </template>
 
@@ -17,7 +24,9 @@ export default {
   data() {
     return {
       goober: [],
+      
     };
+    
   },
   async created() {
     try {
@@ -26,6 +35,7 @@ export default {
       console.log(res.data);
     } catch (err) {
       console.log(err);
+      
     }
   },
 };

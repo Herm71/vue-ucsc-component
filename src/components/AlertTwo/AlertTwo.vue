@@ -1,13 +1,13 @@
 <template>
-  <!-- <AlertTwoInner :items="items" /> -->
-  <AlertTwoInner 
-  v-for="(item, index) in items" 
+  <AlertTwoInner
+    v-for="(item, index) in items"
     :key="index"
     :message="item.message"
     :url="item.url"
     :class="item.class"
     :id="item.id"
-    :urlMessage="item.urlMessage"/>
+    :urlMessage="item.urlMessage"
+  />
 </template>
 
 <script>

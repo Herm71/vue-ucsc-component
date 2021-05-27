@@ -1,5 +1,5 @@
 <template>
-  <span>placeholder</span>
+  
   <ul>
     <li 
     ><p>{{ mesage }}</p></li>

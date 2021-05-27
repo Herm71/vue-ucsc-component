@@ -1,5 +1,6 @@
 <template>
   <AlertBanner :items="items" />
+  <span>placeholder</span>
   <AlertTwo />
 </template>
 

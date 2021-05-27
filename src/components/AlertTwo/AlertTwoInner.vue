@@ -1,16 +1,17 @@
 <template>
-  {{ items }}
+  <span>placeholder</span>
   <ul>
-    <li v-for="(item, index) in items" :key="index">{{ item.messsage }}</li>
+    <li 
+    ><p>{{ mesage }}</p></li>
   </ul>
 </template>
 
 <script>
 export default {
   name: "AlertTwoInner",
-  // props: ["item.class", "item.message", "item.urlMessage", "item.id"],
-  props: {
-    items: Array,
-  },
+  props: ["message"],
+  // props: {
+  //   items: Array,
+  // },
 };
 </script>

@@ -1,28 +1,16 @@
 <template>
-  <div
-    v-for="(item, id) in items"
-    :key="id"
-    :class="item.class"
-    :message="item.message"
-    :url="item.url"
-    :urlMessage="item.urlMessage"
-    class="ribbon-wrap"
-  >
-    <div class="ribbon {{class}}" role="complementary">
-      <div class="inner">
-        {{ message }}
-        <a :href="item.url">{{ urlMessage }}</a>
-      </div>
-    </div>
-  </div>
+  {{ items }}
+  <ul>
+    <li v-for="(item, index) in items" :key="index">{{ item.messsage }}</li>
+  </ul>
 </template>
 
 <script>
 export default {
   name: "AlertTwoInner",
-  props: ["class", "message", "urlMessage", "id"],
-  // props: {
-  //   items: Array,
-  // },
+  // props: ["item.class", "item.message", "item.urlMessage", "item.id"],
+  props: {
+    items: Array,
+  },
 };
 </script>

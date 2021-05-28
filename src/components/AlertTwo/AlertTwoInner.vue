@@ -1,6 +1,6 @@
 <template>
   <div class="ribbon-wrap">
-    <div class="ribbon ribbon-emergency" role="complementary">
+    <div :class="'ribbon '+'class'" role="complementary">
       <div class="inner">
         {{ message }}
         <a :href="url">{{ urlMessage }}</a>

@@ -2,17 +2,21 @@
   <AlertBanner :items="items" />
   <span>-------------</span>
   <AlertTwo />
+  <span>-------------</span>
+  <LocalistTest />
 </template>
 
 <script>
-import AlertBanner from "./components/AlertBanner.vue";
-import AlertTwo from "./components/AlertTwo/AlertTwo.vue";
+import AlertBanner from "@/components/AlertBanner";
+import AlertTwo from "@/components/AlertTwo/AlertTwo";
+import LocalistTest from "@/components/LocalistTest";
 
 export default {
   name: "App",
   components: {
     AlertBanner,
     AlertTwo,
+    LocalistTest,
   },
   created() {
     this.items = [

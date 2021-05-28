@@ -1,6 +1,6 @@
 <template>
   <AlertBanner :items="items" />
-  <span>placeholder</span>
+  <span>-------------</span>
   <AlertTwo />
 </template>
 
@@ -36,7 +36,7 @@ export default {
       {
         id: 3,
         message: "Your mom",
-        urlMessage: "sucks donkey balls.",
+        urlMessage: "has a mustache.",
         url: "https://recovery.ucsc.edu/",
         class: "ribbon-notice",
       },

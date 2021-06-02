@@ -1,18 +1,14 @@
 <template>
   <AlertOne />
-  <span>-------------</span>
-  <AlertTwo />
 </template>
 
 <script>
 import AlertOne from "@/components/AlertOne";
-import AlertTwo from "@/components/AlertTwo/AlertTwo";
 
 export default {
   name: "App",
   components: {
     AlertOne,
-    AlertTwo,
   },
   
 };

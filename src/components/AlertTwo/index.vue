@@ -28,7 +28,7 @@ export default {
     try {
       const res = await axios.get("data.json");
       this.items = res.data;
-      console.log(res.data);
+      // console.log(res.data);
     } catch (err) {
       console.log(err);
     }

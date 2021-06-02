@@ -9,40 +9,42 @@ export default {
   components: {
     AlertOneInner,
   },
-  data(){
+  data() {
     return {
       items: [],
     };
   },
-  created (){
-    this.items = [
-      {
-        id: 1,
-        message:
-          "The Accellion attack impacted University of California (UC), as it previously disclosed in early April.",
-        urlMessage:
-          "Get the latest information about this event, our response, and available credit protection services.",
-        url:
-          "https://ucnet.universityofcalifornia.edu/data-security/accellion-notice.html",
-        class: "ribbon-emergency",
-      },
-      {
-        id: 2,
-        message: "Stay informed:",
-        urlMessage: "COVID-19 (coronavirus) information",
-        url: "https://recovery.ucsc.edu/",
-        class: "ribbon-alert",
-      },
-      {
-        id: 3,
-        message: "Your mom",
-        urlMessage: "has a mustache.",
-        url: "https://recovery.ucsc.edu/",
-        class: "ribbon-notice",
-      },
-    ];
+  async created() {
+    try {
+      this.items = [
+        {
+          id: 1,
+          message:
+            "The Accellion attack impacted University of California (UC), as it previously disclosed in early April.",
+          urlMessage:
+            "Get the latest information about this event, our response, and available credit protection services.",
+          url: "https://ucnet.universityofcalifornia.edu/data-security/accellion-notice.html",
+          class: "ribbon-emergency",
+        },
+        {
+          id: 2,
+          message: "Stay informed:",
+          urlMessage: "COVID-19 (coronavirus) information",
+          url: "https://recovery.ucsc.edu/",
+          class: "ribbon-alert",
+        },
+        {
+          id: 3,
+          message: "Your mom",
+          urlMessage: "has a mustache.",
+          url: "https://recovery.ucsc.edu/",
+          class: "ribbon-notice",
+        },
+      ]; console.log(this.items);
+    } catch (err) {
+      console.log(err);
+    }
   },
-
 };
 </script>
 <style scoped lang="scss">

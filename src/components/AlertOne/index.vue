@@ -2,7 +2,7 @@
   <AlertOneInner :items="items" />
 </template>
 <script>
-// import axios from "axios";
+import axios from "axios";
 import AlertOneInner from "./AlertOneInner";
 export default {
   name: "AlertOne",
@@ -16,31 +16,9 @@ export default {
   },
   async created() {
     try {
-      this.items = [
-        {
-          id: 1,
-          message:
-            "The Accellion attack impacted University of California (UC), as it previously disclosed in early April.",
-          urlMessage:
-            "Get the latest information about this event, our response, and available credit protection services.",
-          url: "https://ucnet.universityofcalifornia.edu/data-security/accellion-notice.html",
-          class: "ribbon-emergency",
-        },
-        {
-          id: 2,
-          message: "Stay informed:",
-          urlMessage: "COVID-19 (coronavirus) information",
-          url: "https://recovery.ucsc.edu/",
-          class: "ribbon-alert",
-        },
-        {
-          id: 3,
-          message: "Your mom",
-          urlMessage: "has a mustache.",
-          url: "https://recovery.ucsc.edu/",
-          class: "ribbon-notice",
-        },
-      ]; console.log(this.items);
+      const res = await axios.get("data.json");
+      this.items = res.data;
+      console.log(res.data);
     } catch (err) {
       console.log(err);
     }

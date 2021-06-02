@@ -1,22 +1,28 @@
 <template>
   <AlertBanner :items="items" />
   <span>-------------</span>
-  <AlertTwo />
+  <AlertOne />
   <span>-------------</span>
-  <LocalistTest />
+  <AlertTwo />
 </template>
 
 <script>
 import AlertBanner from "@/components/AlertBanner";
+import AlertOne from "@/components/AlertOne";
 import AlertTwo from "@/components/AlertTwo/AlertTwo";
-import LocalistTest from "@/components/LocalistTest";
 
 export default {
   name: "App",
   components: {
     AlertBanner,
+    AlertOne,
     AlertTwo,
-    LocalistTest,
+  },
+  data() {
+    return {
+      items: [],
+      // items: null,
+    };
   },
   created() {
     this.items = [

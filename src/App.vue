@@ -1,57 +1,20 @@
 <template>
-  <AlertBanner :items="items" />
-  <span>-------------</span>
   <AlertOne />
   <span>-------------</span>
   <AlertTwo />
 </template>
 
 <script>
-import AlertBanner from "@/components/AlertBanner";
 import AlertOne from "@/components/AlertOne";
 import AlertTwo from "@/components/AlertTwo/AlertTwo";
 
 export default {
   name: "App",
   components: {
-    AlertBanner,
     AlertOne,
     AlertTwo,
   },
-  data() {
-    return {
-      items: [],
-      // items: null,
-    };
-  },
-  created() {
-    this.items = [
-      {
-        id: 1,
-        message:
-          "The Accellion attack impacted University of California (UC), as it previously disclosed in early April.",
-        urlMessage:
-          "Get the latest information about this event, our response, and available credit protection services.",
-        url:
-          "https://ucnet.universityofcalifornia.edu/data-security/accellion-notice.html",
-        class: "ribbon-emergency",
-      },
-      {
-        id: 2,
-        message: "Stay informed:",
-        urlMessage: "COVID-19 (coronavirus) information",
-        url: "https://recovery.ucsc.edu/",
-        class: "ribbon-alert",
-      },
-      {
-        id: 3,
-        message: "Your mom",
-        urlMessage: "has a mustache.",
-        url: "https://recovery.ucsc.edu/",
-        class: "ribbon-notice",
-      },
-    ];
-  },
+  
 };
 </script>
 
